@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Banrural</title>
+    <link rel="stylesheet" href="{{ url_for('assets', path='/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('assets', path='/fonts/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('assets', path='/css/styles.css') }}">
+</head>
+
+<body style="background: url(&quot;assets/img/bg.jpg&quot;);">
+    <nav class="navbar navbar-dark navbar-expand-md" style="background: #00853F;border-bottom: 6px solid #F68E1E ;">
+        <div class="container-fluid"><a class="navbar-brand" href="#"><img src="assets/img/logo_bdr2.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link active d-lg-flex justify-content-lg-start align-items-lg-end" href="#"><i class="fa fa-home" style="font-size: 52px;"></i></a></li>
+                    <li class="nav-item"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="margin-top: 50px;">
+        <div class="row">
+            <div class="col-4" style="background: #E6E6E6;padding-top: 50px;padding-bottom: 50px;">
+                <div class="text-center"><img src="assets/img/banrural-virtual.png"></div>
+                <div>
+                    <p style="font-size: 20px;margin-top: 20px;"><i class="fa fa-user"></i>&nbsp;| Usuario/Contraseña*</p>
+                    <div class="row user_data">
+                        <div class="col-6"><input type="text" id="uid_input" placeholder="Usuario" style="width: 100%;"></div>
+                        <div class="col-6"><button class="btn btn-primary" id="uid_next" type="button" style="width: 100%;background: #00853F;border: none;"><i class="fa fa-angle-double-right"></i>&nbsp;| Siguiente</button></div>
+                    </div>
+                    <div class="row d-none user_data">
+                        <div class="col-6"><input type="password" id="pass_input" placeholder="Constraseña" style="width: 100%;"></div>
+                        <div class="col-6"><button class="btn btn-primary" id="send_data" type="button" style="width: 100%;background: #00853F;border: none;"><i class="fa fa-angle-double-right"></i>&nbsp;| Continuar</button></div>
+                    </div>
+                </div>
+                <div class="text-center" style="border-bottom: 1px solid var(--orange);margin-top: 22px;"><small>* Campos requeridos</small></div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <div class="modal fade flash animated" role="dialog" tabindex="-1" id="disclamer">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-light bg-danger">
+                    <h4 class="modal-title">Disclaimer</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este sitio fue creado como un proyecto universitario, si usted no has sido invitado a participar por favor no rellene los datos solicitados.</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-danger" id="accept_it" type="button">Continuar bajo mi responsabilidad!!</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="{{ url_for('assets', path='/js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('assets', path='/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('assets', path='/js/modal.js') }}"></script>
+    <script src="{{ url_for('assets', path='/js/login.js') }}"></script>
+</body>
+
+</html>
